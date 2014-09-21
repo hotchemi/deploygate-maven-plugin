@@ -30,7 +30,7 @@ mvn deploygate:upload
 
 ### Params
 
-Please check [Push API](https://deploygate.com/docs/api) for param information. 
+Please check [Push API](https://deploygate.com/docs/api) for params information. 
 
 - `ownerName` required.
 - `token` required.
@@ -40,7 +40,25 @@ Please check [Push API](https://deploygate.com/docs/api) for param information.
 - `releaseNote` optional.
 
 ```sh
-% mvn deploygate:upload -DownerName="owner name" -Dtoken="token" -Dfile="sample.apk" -Dmessage="message" -DdistributionKey="distributinKey" -DreleaseNote="release note"
+% mvn deploygate:upload -DownerName="owner name" -Dtoken="token" -Dfile="file.apk" -Dmessage="message" -DdistributionKey="distributinKey" -DreleaseNote="releaseNote"
+```
+
+or
+
+```sh
+<plugin>
+    <groupId>com.github,hotchemi</groupId>
+    <artifactId>deploygate-maven-plugin</artifactId>
+    <version>1.0.0</version>
+    <configuration>
+        <ownerName>ownerName</ownerName>
+        <token>token</token>
+        <file>file.apk</file>
+        <message>message</message>
+        <distributionKey>distributionKey</distributionKey>
+        <releaseNote>releaseNote</releaseNote>
+    </configuration>
+</plugin>
 ```
 
 ## Contribute
