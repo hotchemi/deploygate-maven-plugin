@@ -1,20 +1,58 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
 
     <groupId>com.github.hotchemi</groupId>
     <artifactId>deploygate-maven-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
 
-    <name>DeployGate plugin for the maven.</name>
-    <url>http://maven.apache.org</url>
+    <name>deploygate-maven-plugin</name>
+    <url>https://github.com/hotchemi/deploygate-maven-plugin</url>
+    <description>DeployGate plugin for the maven.</description>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <url>http://hotchemi.github.io</url>
+        <name>Shintaro Katafuchi</name>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>hotchemi</id>
+            <name>Shintaro Katafuchi</name>
+            <email>hot.chemistry21@gmail.com</email>
+            <url>http://hotchemi.github.io</url>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:https://github.com/hotchemi/deploygate-maven-plugin.git</connection>
         <url>scm:git:https://github.com/hotchemi/deploygate-maven-plugin.git</url>
-        <developerConnection>scm:git:https://github.com/hotchemi/deploygate-maven-plugin.git</developerConnection>
-      <tag>deploygate-maven-plugin-1.0</tag>
-  </scm>
+        <developerConnection>scm:git:https://github.com/hotchemi/deploygate-maven-plugin.git
+        </developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Maven Central Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +60,19 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
