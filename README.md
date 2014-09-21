@@ -1,7 +1,7 @@
 deploygate-maven-plugin
 =======================
 
-[![Build Status](https://travis-ci.org/hotchemi/deploygate-maven-plugin.svg?branch=1.0.0)](https://travis-ci.org/hotchemi/deploygate-maven-plugin)
+[![Build Status](https://travis-ci.org/hotchemi/deploygate-maven-plugin.svg?branch=master)](https://travis-ci.org/hotchemi/deploygate-maven-plugin)
 
 This is the DeployGate plugin for maven.  
 This plugin, you can use the deploygate API from maven easily.
