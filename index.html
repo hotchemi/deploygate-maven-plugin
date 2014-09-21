@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Deploygate-maven-plugin by hotchemi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Deploygate-maven-plugin</h1>
+        <p class="header">DeployGate plugin for maven.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/hotchemi/deploygate-maven-plugin/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/hotchemi/deploygate-maven-plugin/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/hotchemi/deploygate-maven-plugin">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/hotchemi">hotchemi</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="deploygate-maven-plugin" class="anchor" href="#deploygate-maven-plugin"><span class="octicon octicon-link"></span></a>deploygate-maven-plugin</h1>
+
+<p><a href="https://travis-ci.org/hotchemi/deploygate-maven-plugin"><img src="https://travis-ci.org/hotchemi/deploygate-maven-plugin.svg?branch=master" alt="Build Status"></a></p>
+
+<p>This is the DeployGate plugin for maven.<br>
+This plugin, you can use the deploygate API from maven easily.</p>
+
+<p>For issue tracking see the <a href="https://github.com/hotchemi/deploygate-maven-plugin/issues">GitHub issues page</a>.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>Add plugin to your pom.xml.</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.github.hotchemi<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>deploygate-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Execute following command to upload to deploygate.</p>
+
+<div class="highlight highlight-sh"><pre>mvn deploygate:upload 
+</pre></div>
+
+<h3>
+<a name="params" class="anchor" href="#params"><span class="octicon octicon-link"></span></a>Params</h3>
+
+<p>Please check <a href="https://deploygate.com/docs/api">Push API</a> for params information. </p>
+
+<ul>
+<li>
+<code>ownerName</code> required.</li>
+<li>
+<code>token</code> required.</li>
+<li>
+<code>file</code> required.</li>
+<li>
+<code>message</code> optional.</li>
+<li>
+<code>distributionKey</code> optional.</li>
+<li>
+<code>releaseNote</code> optional.</li>
+</ul><div class="highlight highlight-sh"><pre>% mvn deploygate:upload -DownerName<span class="o">=</span><span class="s2">"owner name"</span> -Dtoken<span class="o">=</span><span class="s2">"token"</span> -Dfile<span class="o">=</span><span class="s2">"file.apk"</span> -Dmessage<span class="o">=</span><span class="s2">"message"</span> -DdistributionKey<span class="o">=</span><span class="s2">"distributinKey"</span> -DreleaseNote<span class="o">=</span><span class="s2">"releaseNote"</span>
+</pre></div>
+
+<p>or</p>
+
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.github,hotchemi<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>deploygate-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;ownerName&gt;</span>ownerName<span class="nt">&lt;/ownerName&gt;</span>
+        <span class="nt">&lt;token&gt;</span>token<span class="nt">&lt;/token&gt;</span>
+        <span class="nt">&lt;file&gt;</span>file.apk<span class="nt">&lt;/file&gt;</span>
+        <span class="nt">&lt;message&gt;</span>message<span class="nt">&lt;/message&gt;</span>
+        <span class="nt">&lt;distributionKey&gt;</span>distributionKey<span class="nt">&lt;/distributionKey&gt;</span>
+        <span class="nt">&lt;releaseNote&gt;</span>releaseNote<span class="nt">&lt;/releaseNote&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</pre></div>
+
+<h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol><h2>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>ChangeLog</h2>
+
+<ul>
+<li>2014/09/21 1.0.0 release.</li>
+</ul><h2>
+<a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
+
+<pre><code> Copyright 2014 Shintaro Katafuchi
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+</code></pre>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
