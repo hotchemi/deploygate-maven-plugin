@@ -2,5 +2,8 @@ language: java
 jdk:
   - openjdk7
 
+install:
+  - mvn install -Dgpg.skip=true
+
 script:
-  - mvn clean test -Dgpg.passphrase=hoge
+  - mvn clean test
