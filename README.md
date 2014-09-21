@@ -45,7 +45,7 @@ Please check [Push API](https://deploygate.com/docs/api) for params information.
 
 or
 
-```sh
+```xml
 <plugin>
     <groupId>com.github,hotchemi</groupId>
     <artifactId>deploygate-maven-plugin</artifactId>
