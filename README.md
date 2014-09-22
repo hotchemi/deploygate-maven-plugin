@@ -3,6 +3,7 @@ deploygate-maven-plugin
 
 [![Build Status](https://travis-ci.org/hotchemi/deploygate-maven-plugin.svg?branch=master)](https://travis-ci.org/hotchemi/deploygate-maven-plugin)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.hotchemi/deploygate-maven-plugin/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.github.hotchemi/deploygate-maven-plugin)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-deploygate--maven--plugin-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/974)
 
 This is the DeployGate plugin for maven.  
 This plugin, you can use the deploygate API from maven easily.
