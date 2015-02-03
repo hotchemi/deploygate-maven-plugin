@@ -31,37 +31,37 @@
       </header>
       <section>
         <h1>
-<a name="deploygate-maven-plugin" class="anchor" href="#deploygate-maven-plugin"><span class="octicon octicon-link"></span></a>deploygate-maven-plugin</h1>
+<a id="deploygate-maven-plugin" class="anchor" href="#deploygate-maven-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>deploygate-maven-plugin</h1>
 
-<p><a href="https://travis-ci.org/hotchemi/deploygate-maven-plugin"><img src="https://travis-ci.org/hotchemi/deploygate-maven-plugin.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://travis-ci.org/hotchemi/deploygate-maven-plugin"><img src="https://travis-ci.org/hotchemi/deploygate-maven-plugin.svg?branch=master" alt="Build Status"></a>
+<a href="https://maven-badges.herokuapp.com/maven-central/com.github.hotchemi/deploygate-maven-plugin"><img src="https://maven-badges.herokuapp.com/maven-central/com.github.hotchemi/deploygate-maven-plugin/badge.svg?style=flat" alt="Maven Central"></a>
+<a href="https://android-arsenal.com/details/1/974"><img src="https://img.shields.io/badge/Android%20Arsenal-deploygate--maven--plugin-brightgreen.svg?style=flat" alt="Android Arsenal"></a></p>
 
 <p>This is the DeployGate plugin for maven.<br>
-This plugin, you can use the deploygate API from maven easily.</p>
+Through this plugin, you can use the deploygate API from maven easily.</p>
 
 <p>For issue tracking see the <a href="https://github.com/hotchemi/deploygate-maven-plugin/issues">GitHub issues page</a>.</p>
 
 <h2>
-<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
 
 <p>Add plugin to your pom.xml.</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;plugin&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.github.hotchemi<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>deploygate-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">plugin</span>&gt;
+    &lt;<span class="pl-ent">groupId</span>&gt;com.github.hotchemi&lt;/<span class="pl-ent">groupId</span>&gt;
+    &lt;<span class="pl-ent">artifactId</span>&gt;deploygate-maven-plugin&lt;/<span class="pl-ent">artifactId</span>&gt;
+    &lt;<span class="pl-ent">version</span>&gt;1.0.0&lt;/<span class="pl-ent">version</span>&gt;
+&lt;/<span class="pl-ent">plugin</span>&gt;</pre></div>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Execute following command to upload to deploygate.</p>
 
-<div class="highlight highlight-sh"><pre>mvn deploygate:upload 
-</pre></div>
+<div class="highlight highlight-sh"><pre>mvn deploygate:upload </pre></div>
 
 <h3>
-<a name="params" class="anchor" href="#params"><span class="octicon octicon-link"></span></a>Params</h3>
+<a id="params" class="anchor" href="#params" aria-hidden="true"><span class="octicon octicon-link"></span></a>Params</h3>
 
 <p>Please check <a href="https://deploygate.com/docs/api">Push API</a> for params information. </p>
 
@@ -78,28 +78,28 @@ This plugin, you can use the deploygate API from maven easily.</p>
 <code>distributionKey</code> optional.</li>
 <li>
 <code>releaseNote</code> optional.</li>
-</ul><div class="highlight highlight-sh"><pre>% mvn deploygate:upload -DownerName<span class="o">=</span><span class="s2">"owner name"</span> -Dtoken<span class="o">=</span><span class="s2">"token"</span> -Dfile<span class="o">=</span><span class="s2">"file.apk"</span> -Dmessage<span class="o">=</span><span class="s2">"message"</span> -DdistributionKey<span class="o">=</span><span class="s2">"distributinKey"</span> -DreleaseNote<span class="o">=</span><span class="s2">"releaseNote"</span>
-</pre></div>
+</ul>
+
+<div class="highlight highlight-sh"><pre>% mvn deploygate:upload -DownerName=<span class="pl-s1"><span class="pl-pds">"</span>owner name<span class="pl-pds">"</span></span> -Dtoken=<span class="pl-s1"><span class="pl-pds">"</span>token<span class="pl-pds">"</span></span> -Dfile=<span class="pl-s1"><span class="pl-pds">"</span>file.apk<span class="pl-pds">"</span></span> -Dmessage=<span class="pl-s1"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span> -DdistributionKey=<span class="pl-s1"><span class="pl-pds">"</span>distributinKey<span class="pl-pds">"</span></span> -DreleaseNote=<span class="pl-s1"><span class="pl-pds">"</span>releaseNote<span class="pl-pds">"</span></span></pre></div>
 
 <p>or</p>
 
-<div class="highlight highlight-xml"><pre><span class="nt">&lt;plugin&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.github,hotchemi<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>deploygate-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;configuration&gt;</span>
-        <span class="nt">&lt;ownerName&gt;</span>ownerName<span class="nt">&lt;/ownerName&gt;</span>
-        <span class="nt">&lt;token&gt;</span>token<span class="nt">&lt;/token&gt;</span>
-        <span class="nt">&lt;file&gt;</span>file.apk<span class="nt">&lt;/file&gt;</span>
-        <span class="nt">&lt;message&gt;</span>message<span class="nt">&lt;/message&gt;</span>
-        <span class="nt">&lt;distributionKey&gt;</span>distributionKey<span class="nt">&lt;/distributionKey&gt;</span>
-        <span class="nt">&lt;releaseNote&gt;</span>releaseNote<span class="nt">&lt;/releaseNote&gt;</span>
-    <span class="nt">&lt;/configuration&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span>
-</pre></div>
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">plugin</span>&gt;
+    &lt;<span class="pl-ent">groupId</span>&gt;com.github,hotchemi&lt;/<span class="pl-ent">groupId</span>&gt;
+    &lt;<span class="pl-ent">artifactId</span>&gt;deploygate-maven-plugin&lt;/<span class="pl-ent">artifactId</span>&gt;
+    &lt;<span class="pl-ent">version</span>&gt;1.0.0&lt;/<span class="pl-ent">version</span>&gt;
+    &lt;<span class="pl-ent">configuration</span>&gt;
+        &lt;<span class="pl-ent">ownerName</span>&gt;ownerName&lt;/<span class="pl-ent">ownerName</span>&gt;
+        &lt;<span class="pl-ent">token</span>&gt;token&lt;/<span class="pl-ent">token</span>&gt;
+        &lt;<span class="pl-ent">file</span>&gt;file.apk&lt;/<span class="pl-ent">file</span>&gt;
+        &lt;<span class="pl-ent">message</span>&gt;message&lt;/<span class="pl-ent">message</span>&gt;
+        &lt;<span class="pl-ent">distributionKey</span>&gt;distributionKey&lt;/<span class="pl-ent">distributionKey</span>&gt;
+        &lt;<span class="pl-ent">releaseNote</span>&gt;releaseNote&lt;/<span class="pl-ent">releaseNote</span>&gt;
+    &lt;/<span class="pl-ent">configuration</span>&gt;
+&lt;/<span class="pl-ent">plugin</span>&gt;</pre></div>
 
 <h2>
-<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
 
 <ol>
 <li>Fork it</li>
@@ -107,13 +107,17 @@ This plugin, you can use the deploygate API from maven easily.</p>
 <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
 <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
 <li>Create new Pull Request</li>
-</ol><h2>
-<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>ChangeLog</h2>
+</ol>
+
+<h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>ChangeLog</h2>
 
 <ul>
 <li>2014/09/21 1.0.0 release.</li>
-</ul><h2>
-<a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
+</ul>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Licence</h2>
 
 <pre><code> Copyright 2014 Shintaro Katafuchi
 
