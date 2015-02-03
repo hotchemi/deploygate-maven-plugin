@@ -6,7 +6,7 @@ deploygate-maven-plugin
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-deploygate--maven--plugin-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/974)
 
 This is the DeployGate plugin for maven.  
-This plugin, you can use the deploygate API from maven easily.
+Through this plugin, you can use the deploygate API from maven easily.
 
 For issue tracking see the [GitHub issues page](https://github.com/hotchemi/deploygate-maven-plugin/issues).
 
